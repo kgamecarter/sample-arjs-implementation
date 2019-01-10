@@ -1,54 +1,39 @@
-<!DOCTYPE html>
-
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<title>Sample AR</title>
-		<script src="aframe.min.js"></script>
-		<script src="aframe-ar.js"></script>
-		<script src="inflate.min.js"></script>
-		<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v5.0.1/dist/aframe-extras.min.js"></script>
-    </head>
-	<body style="margin : 0px; overflow: hidden; font-family: Monospace;"><div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
-	</div>
-		<a-scene embedded vr-mode-ui="enabled: false" arjs='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;debugUIEnabled: false;'>
-
-			<a-assets>
-				<img id="sample_image" src="2.webp" crossorigin="anonymous">
-    		</a-assets>
-
-
-			<a-marker preset='custom' type='pattern' url='ArMaker02.patt'>
-                    <!-- <a-entity scale="1 1 1" fbx-model="src: url(firework_test01.FBX);"></a-entity> -->
-
-			
-					<!-- FOR GIFS -->
-					<a-entity position="0 0 0" scale="3 3 3" rotation="-90 -45 0" geometry="primitive:plane" material="shader:gif;src:url(firework4.gif);" gif="" transparent="true"></a-entity>
-
-					<!-- FOR NON-GIF IMAGES -->
-					<!-- <a-image rotation="-90 0 0" src="#sample_image"></a-image> -->
-
-					<!-- FOR TEXT					 -->
-					<!-- <a-entity rotation="-90 0 0" position="-1 0 0" text-geometry="value: Sample Sample Sample; size: 0.2;"></a-entity> -->
-			</a-marker>
-
-			<a-marker preset='custom' type='pattern' url='ArMaker01.patt'>
-					<a-entity position="0 0 0" scale="3 3 3" rotation="-90 -45 0" geometry="primitive:plane" material="shader:gif;src:url(firework4.gif);" gif="" transparent="true"></a-entity>
-			</a-marker>
-
-			<a-marker preset='custom' type='pattern' url='ArMaker03.patt'>
-					<a-entity position="0 0 0" scale="3 3 3" rotation="-90 -45 0" geometry="primitive:plane" material="shader:gif;src:url(firework4.gif);" gif="" transparent="true"></a-entity>
-			</a-marker>
-
-
-
-			<a-entity camera></a-entity>
-		</a-scene>
-	</body>
-
-	<script src="aframe-text-geometry-component.min.js"></script>
-	<script src="aframe-gif-shader.js"></script>
+﻿<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>眷春AR煙火秀</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body style="background: #3c0020;background: linear-gradient(to bottom, #3c0020 0%,#000000 50%,#3c0020 100%);">
+    <div class="container">
+        <div class="row" style="min-height: 100vh;">
+            <div class="col-12 p-0">
+                <img src="img/logo.png" style="width: 100%;" />
+            </div>
+            <div class="col text-center p-3">
+                    <button type="button" class="btn btn-outline-light btn-lg" style="border-radius:100%;width: 100px;height: 100px">開始<br>體驗</button>
+                    <img src="img/firework.png" style="width: 100%;position:absolute;right: 0;top: -100px;z-index: -999" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                    <img src="img/text.png" style="width: 100%;" />
+            </div>
+            <div class="col-4 offset-1 p-3">
+                    <button type="button" class="btn btn-outline-light btn-block">iOS<br>系統說明</button>
+            </div>
+            <div class="col-1 p-3">
+            </div>
+            <div class="col-4 offset-1 p-3">
+                    <button type="button" class="btn btn-outline-light btn-block">Android<br>系統說明</button>
+            </div>
+            <div class="col-12">
+                    <img src="img/hand.png" style="width: 100%;" />
+            </div>
+        </div>
+    </div>
+</body>
 </html>
