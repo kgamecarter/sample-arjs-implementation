@@ -658,6 +658,8 @@
 	        }.bind(img, null, i);
 	        img.src = src;
 	      });
+        document.getElementById('load').style.display='none';
+        document.getElementById('st').style.display='inline-block';
 	    };
 	    var imageFix = function imageFix(i) {
 	      var img = new Image();
@@ -674,8 +676,6 @@
 	      img.src = cnv.toDataURL('image/gif');
 	    };
 	    loadImg();
-        document.getElementById('load').style.display='none';
-        document.getElementById('st').style.display='inline-block';
 	  }
 	};
 
