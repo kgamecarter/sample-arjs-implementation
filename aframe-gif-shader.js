@@ -387,6 +387,8 @@
 	      cb();
 	    });
 	    xhr.send();
+        document.getElementById('load').style.display='none';
+        document.getElementById('st').style.display='inline-block';
 	  },
 
 
