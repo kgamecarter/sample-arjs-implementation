@@ -7,16 +7,48 @@
     <title>眷春AR煙火秀</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
-<body style="background: #3c0020;background: linear-gradient(to bottom, #a90023 0%, #640010 100%);">
+<body style="background: #3c0020;background: linear-gradient(to bottom, #3c0020 0%,#000000 50%,#3c0020 100%);">
     <div class="container">
-        <div class="row" style="height: 100vh;">
+        <div class="row"  style="">
             <div class="col-12 pr-4 pl-4 pt-4">
-                您封鎖了相機或者你沒有相機
+                <h5 style="color: #fff;">您封鎖了相機<Br>或者你沒有使用系統瀏覽器</h5>
             </div>
-            <div class="col text-center">
-                    <button type="button" onclick="location.href='index.html'" class="btn btn-outline-light btn-lg" style="border-radius:100%;width: 80px;height: 80px">返回</button>
+            <div class="col-12 py-3">
+                    <img src="img/text.png" style="width: 100%;" />
+            </div>
+            <div class="col-4 offset-1 p-3">
+                <a href="ios.html"><img src="img/iOS_btn.png" style="width: 100%;" /></a>
+            </div>
+            <div class="col-1 p-3">
+            </div>
+            <div class="col-4 offset-1 p-3">
+                <a href="android.html"><img src="img/Android_btn.png" style="width: 100%;" /></a>
+            </div>
+            
+            <div class="col text-center pt-3">
+                        <button type="button" onclick="location.href='index.html'" class="btn btn-outline-light btn-lg" style="border-radius:100%;width: 80px;height: 80px">返回</button>
+            </div>
+            <div class="col-12 text-center p-5">
             </div>
         </div>
+
     </div>
 </body>
+<script type="text/javascript">
+    function share() {
+        if (navigator.share){
+            navigator.share({title: '2019 勝利星村燈會在屏東', text: '2019 勝利星村燈會在屏東祝您新年快樂', url: location.href});
+        }
+        else{
+            document.getElementById('ishare').style.display='block';
+            if (navigator.userAgent.indexOf("iPad") >= 0){
+                document.getElementById('ibig').style.display='block';
+            }else{
+                document.getElementById('ism').style.display='block';
+            }
+        }
+        
+    }
+    
+</script>
 </html>
