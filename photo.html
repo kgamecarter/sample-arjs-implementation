@@ -71,7 +71,8 @@
 	<script src="aframe-gif-shader.js"></script>
     <script type="text/javascript">
         function start() {
-            document.getElementById('info').style.display='none';
+            var child=document.getElementById("info");
+            child.parentNode.removeChild(child)
         }
 
     </script>
