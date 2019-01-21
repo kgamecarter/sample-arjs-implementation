@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body style="background: #3c0020;background: linear-gradient(to bottom, #4c0020 0%, #130005 100%);">
-    <div class="container" style="overflow: auto;height: 100vh;">
+    <div class="container" style="overflow: hidden;height: 100vh;">
         <div class="row" style="height: 100vh;">
             <div class="col-10 col-md-8 offset-1 offset-md-2 pt-4">
                 <img src="img/share.png" style="width: 100%;" />
@@ -17,6 +17,9 @@
             <div class="col-12 pt-3 text-center">
                     <button type="button" onclick="share()" class="btn btn-outline-light btn-lg" style="border-radius:100%;width: 80px;height: 80px;background-image:url('img/share_btn.png');background-size: 100%"></button>
             </div>
+            <!--<div class="col-12 text-center p-3">
+                <a href="https://2019taiwanlantern.tw/"><img src="img/menulogo.png" style="width: 5%;" />  2019 台灣燈會在屏東</a>
+            </div>-->
         </div>
     </div>
     <div id="ishare" style="display: none">
@@ -29,7 +32,7 @@
 <script type="text/javascript">
     function share() {
         if (navigator.share){
-            navigator.share({title: '2019 勝利星村燈會在屏東', text: '2019 勝利星村燈會在屏東祝您新年快樂', url: location.href});
+            navigator.share({title: '2019 台灣燈會在屏東', text: '2019 台灣燈會在屏東祝您新年快樂', url:"https://2019taiwanlantern.tw/"});
         }
         else{
             document.getElementById('ishare').style.display='block';

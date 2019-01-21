@@ -14,25 +14,13 @@
 	<body style="margin : 0px; overflow: hidden; font-family: Monospace;">
         <audio id="audio" src="bgm.aac" loop></audio>
         <div id="info" style="position: fixed;z-index: 9999;top: 0;right: 0;width: 100vw;height: 100vh;overflow:auto;">
-            <div class="container">
             <div class="row"  style="background: #3c0020;background: linear-gradient(to bottom, #3c0020 0%,#000000 50%,#3c0020 100%);">
-                <div class="col-12 py-3">
-                        <img src="img/text.png" style="width: 100%;" />
-                </div>
-                <div class="col-4 offset-1 p-3">
-                    <a href="ios.html"><img src="img/iOS_btn.png" style="width: 100%;" /></a>
-                </div>
-                <div class="col-1 p-3">
-                </div>
-                <div class="col-4 offset-1 p-3">
-                    <a href="android.html"><img src="img/Android_btn.png" style="width: 100%;" /></a>
-                </div>
                 <div class="col-12">
-                        <img src="img/hand.png" style="width: 100%;" />
+                        <img src="img/fake.png" style="width: 100%;" />
                 </div>
                 <div id="load" class="col-12 text-center p-3">
                 <div class="lds-css ng-scope"><div style="margin: auto;width:100%;height:100%" class="lds-facebook"><div></div><div></div><div></div></div></div>
-                    <p style="color: #fff;font-size: 20px;">讀取中請稍後...</p>
+                    <p style="color: #fff;font-size: 20px;">煙火製造中請稍後...</p>
                 </div>
                 <div class="col-12 text-center p-3">
                         <button type="button" onclick="start()" id="st" class="btn btn-outline-light btn-lg" style="border-radius:100%;width: 130px;height: 130px;background-image:url('img/start_btn.png');background-size: 100%;display: none;"> </button>
@@ -40,7 +28,6 @@
                 <div class="col-12 text-center p-5">
                 </div>
             </div>
-        </div>
         </div>
     <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
 	</div>
@@ -50,19 +37,10 @@
 				<img id="sample_image" src="" crossorigin="anonymous">
     		</a-assets>
 
-
 			<a-marker preset='custom' type='pattern' url='ArMaker01.patt'>
-                    <!-- <a-entity scale="1 1 1" fbx-model="src: url(firework_test01.FBX);"></a-entity> -->
 
-			
-					<!-- FOR GIFS -->
-					<a-entity position="0 0 0" scale="1 1 1" rotation="-90 -45 0" geometry="primitive:plane" material="shader:gif;src:url(AR_fireworks_C.gif);" gif="" transparent="true"></a-entity>
+					<a-entity position="1.5 0 -1.5" scale="3 1.5 1.5" rotation="-90 -45 0" geometry="primitive:plane" material="shader:gif;src:url(AR_fireworks.gif);" gif="" transparent="true"></a-entity>
 
-					<!-- FOR NON-GIF IMAGES -->
-					<!-- <a-image rotation="-90 0 0" src="#sample_image"></a-image> -->
-
-					<!-- FOR TEXT					 -->
-					<!-- <a-entity rotation="-90 0 0" position="-1 0 0" text-geometry="value: Sample Sample Sample; size: 0.2;"></a-entity> -->
 			</a-marker>
 
 			<a-entity camera></a-entity>

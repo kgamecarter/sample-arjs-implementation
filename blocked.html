@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
     <meta charset="utf-8">
@@ -11,10 +11,14 @@
     <div class="container">
         <div class="row"  style="">
             <div class="col-12 pr-4 pl-4 pt-4">
-                <h5 style="color: #fff;">您封鎖了相機<Br>或者你沒有使用系統瀏覽器</h5>
+                <h5 style="color: #fff;">您封鎖了相機<Br>或者沒有使用系統瀏覽器</h5>
+            </div>
+            <div class="col-12 p-1">
             </div>
             <div class="col-12 py-3">
                     <img src="img/text.png" style="width: 100%;" />
+            </div>
+            <div class="col-12 p-3">
             </div>
             <div class="col-4 offset-1 p-3">
                 <a href="ios.html"><img src="img/iOS_btn.png" style="width: 100%;" /></a>
@@ -24,31 +28,15 @@
             <div class="col-4 offset-1 p-3">
                 <a href="android.html"><img src="img/Android_btn.png" style="width: 100%;" /></a>
             </div>
-            
+            <div class="col-12 p-3">
+            </div>
             <div class="col text-center pt-3">
-                        <button type="button" onclick="location.href='index.html'" class="btn btn-outline-light btn-lg" style="border-radius:100%;width: 80px;height: 80px">返回</button>
+                        <button type="button" onclick="location.href='index.html'" class="btn btn-outline-light btn-lg" style="border-radius:100%;width: 110px;height: 110px;background-image:url('img/back.png');background-size: 100%;"> </button>
             </div>
             <div class="col-12 text-center p-5">
+                            <img src="img/firework.png" style="width: 100%;position: fixed;right: 0;bottom: 50px;z-index: -1000;" />
             </div>
         </div>
 
     </div>
 </body>
-<script type="text/javascript">
-    function share() {
-        if (navigator.share){
-            navigator.share({title: '2019 勝利星村燈會在屏東', text: '2019 勝利星村燈會在屏東祝您新年快樂', url: location.href});
-        }
-        else{
-            document.getElementById('ishare').style.display='block';
-            if (navigator.userAgent.indexOf("iPad") >= 0){
-                document.getElementById('ibig').style.display='block';
-            }else{
-                document.getElementById('ism').style.display='block';
-            }
-        }
-        
-    }
-    
-</script>
-</html>
