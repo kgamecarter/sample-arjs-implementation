@@ -658,8 +658,10 @@
 	        }.bind(img, null, i);
 	        img.src = src;
 	      });
-        document.getElementById('load').style.display='none';
-        document.getElementById('st').style.display='inline-block';
+        
+        setTimeout("document.getElementById('load').style.display='none'", 5000 )
+        setTimeout("document.getElementById('st').style.display='inline-block'", 5000 )
+        
 	    };
 	    var imageFix = function imageFix(i) {
 	      var img = new Image();
